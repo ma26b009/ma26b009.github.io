@@ -65,9 +65,9 @@ document.documentElement.classList.add("js");
         sin:  { f: Math.sin, d: Math.cos, x: [-6.3, 6.3], y: [-2, 2], start: 1,
                 name: 'sin x', dname: 'cos x' },
         sq:   { f: function (x) { return x * x; }, d: function (x) { return 2 * x; },
-                x: [-3, 3], y: [-7, 10], start: 1, name: 'xÂ²', dname: '2x' },
+                x: [-3, 3], y: [-7, 10], start: 1, name: 'x²', dname: '2x' },
         cube: { f: function (x) { return x * x * x - 3 * x; }, d: function (x) { return 3 * x * x - 3; },
-                x: [-2.5, 2.5], y: [-9, 16], start: 1.5, name: 'xÂ³ âˆ’ 3x', dname: '3xÂ² âˆ’ 3' }
+                x: [-2.5, 2.5], y: [-9, 16], start: 1.5, name: 'x³ − 3x', dname: '3x² − 3' }
       };
       function css(n) { return getComputedStyle(document.documentElement).getPropertyValue(n).trim(); }
       function setup() {
@@ -107,15 +107,15 @@ document.documentElement.classList.add("js");
         ctx.fillStyle = accent; ctx.beginPath(); ctx.arc(X(a), Y(fa), 6, 0, 7); ctx.fill();
         ctx.fillStyle = muted;
         if (da >= c.y[0] && da <= c.y[1]) { ctx.beginPath(); ctx.arc(X(a), Y(da), 5, 0, 7); ctx.fill(); }
-        ctx.font = '600 12px Inter, system-ui, sans-serif'; ctx.textBaseline = 'middle';
-        var items = [[accent, 'f(x) = ' + c.name, []], [muted, "fâ€²(x) = " + c.dname, [6, 5]], [text, 'tangent at x', []]];
+        ctx.font = '500 12px "IBM Plex Sans", system-ui, sans-serif'; ctx.textBaseline = 'middle';
+        var items = [[accent, 'f(x) = ' + c.name, []], [muted, "f′(x) = " + c.dname, [6, 5]], [text, 'tangent at x', []]];
         items.forEach(function (it, i) {
           var y = pad + 6 + i * 18;
           ctx.strokeStyle = it[0]; ctx.lineWidth = 2.5; ctx.setLineDash(it[2]);
           ctx.beginPath(); ctx.moveTo(pad + 8, y); ctx.lineTo(pad + 34, y); ctx.stroke(); ctx.setLineDash([]);
           ctx.fillStyle = text; ctx.fillText(it[1], pad + 42, y);
         });
-        out.textContent = 'At x = ' + a.toFixed(2) + ':  f(x) = ' + fa.toFixed(2) + ',  slope fâ€²(x) = ' + da.toFixed(2);
+        out.textContent = 'At x = ' + a.toFixed(2) + ':  f(x) = ' + fa.toFixed(2) + ',  slope f′(x) = ' + da.toFixed(2);
       }
       sel.addEventListener('change', function () { setup(); draw(); });
       rng.addEventListener('input', draw);
@@ -211,7 +211,7 @@ document.documentElement.classList.add("js");
             if (i === 0) c.moveTo(x, y); else c.lineTo(x, y);
           }
           c.stroke();
-          c.fillStyle = css('--muted'); c.font = '12px ui-monospace, Menlo, Consolas, monospace';
+          c.fillStyle = css('--muted'); c.font = '12px "IBM Plex Mono", ui-monospace, Menlo, monospace';
           c.textBaseline = 'top'; c.fillText('r = cos(' + k + '\u03B8)', 12, 10);
         });
       }
@@ -262,7 +262,7 @@ document.documentElement.classList.add("js");
           c.setLineDash([5, 4]); c.strokeStyle = text; c.lineWidth = 1.5;
           [hx, gx].forEach(function (v) { c.beginPath(); c.moveTo(X(v), Y(0)); c.lineTo(X(v), Y(f(v))); c.stroke(); });
           c.setLineDash([]);
-          c.fillStyle = text; c.font = '600 12px Inter, system-ui, sans-serif'; c.textBaseline = 'top'; c.textAlign = 'center';
+          c.fillStyle = text; c.font = '500 12px "IBM Plex Sans", system-ui, sans-serif'; c.textBaseline = 'top'; c.textAlign = 'center';
           c.fillText('h(x)', X(hx), Y(0) + 6); c.fillText('g(x)', X(gx), Y(0) + 6);
           c.textAlign = 'left'; c.fillStyle = muted; c.fillText('f(t)', X(0.15), Y(f(0.15)) - 22);
           var formula = f(gx) * dg(x) - f(hx) * dh(x), e = 1e-4;
