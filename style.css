@@ -494,3 +494,90 @@ footer { padding: 34px 22px; }
   .contact .wrap { border-radius: 22px; padding: 26px 19px; }
   .robo { padding: 27px 21px; }
 }
+
+
+/* FINAL PALETTE: deep navy, black and electric blue â€” no orange */
+:root {
+  color-scheme: dark;
+  --bg: #050b18;
+  --bg2: #09152b;
+  --text: #eaf2ff;
+  --muted: #a8b8d2;
+  --accent: #4da3ff;
+  --accent2: #8bc5ff;
+  --teal: #38bdf8;
+  --card: #0c1930;
+  --line: #1d3a60;
+  --nav: rgba(5, 11, 24, 0.91);
+  --shadow: 0 18px 50px rgba(0, 0, 0, 0.42);
+}
+
+:root[data-theme="light"],
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #050b18;
+  --bg2: #09152b;
+  --text: #eaf2ff;
+  --muted: #a8b8d2;
+  --accent: #4da3ff;
+  --accent2: #8bc5ff;
+  --teal: #38bdf8;
+  --card: #0c1930;
+  --line: #1d3a60;
+  --nav: rgba(5, 11, 24, 0.91);
+  --shadow: 0 18px 50px rgba(0, 0, 0, 0.42);
+}
+body {
+  background:
+    radial-gradient(ellipse at 12% 8%, rgba(29, 78, 216, .16), transparent 34%),
+    radial-gradient(ellipse at 88% 24%, rgba(14, 165, 233, .12), transparent 30%),
+    var(--bg);
+}
+nav {
+  background: rgba(4, 10, 22, .88);
+  border-bottom: 1px solid rgba(77, 163, 255, .2);
+  backdrop-filter: blur(18px);
+}
+.logo span, h1 span, .num, .ic, .icon, .sym, .script {
+  color: var(--accent);
+}
+.hero {
+  background:
+    radial-gradient(ellipse 50% 60% at 82% 42%, rgba(37, 99, 235, .22), transparent 72%),
+    radial-gradient(ellipse 40% 50% at 0% 100%, rgba(14, 165, 233, .13), transparent 72%),
+    linear-gradient(135deg, #030813, #07152b 58%, #050b18);
+}
+.hero::before {
+  background-image: radial-gradient(rgba(96, 165, 250, .28) 1px, transparent 1.5px);
+}
+.photo-frame::before { border-color: #4da3ff; }
+.photo-frame::after { border-color: rgba(77, 163, 255, .38); }
+.photo-frame img {
+  border-color: #102744;
+  box-shadow: 0 24px 75px rgba(0,0,0,.55), 0 0 34px rgba(37,99,235,.2);
+}
+.chip, .badge, .tile, .card, .panel, .word, .contact .wrap {
+  background-color: rgba(10, 25, 48, .9);
+  border-color: rgba(77, 163, 255, .25);
+}
+.btn.primary {
+  color: #03101f;
+  background: linear-gradient(135deg, #60a5fa, #38bdf8);
+  border-color: #60a5fa;
+  box-shadow: 0 10px 30px rgba(37, 99, 235, .28);
+}
+.btn.ghost, #theme {
+  color: #9bcaff;
+  border-color: rgba(77, 163, 255, .55);
+}
+section.alt {
+  background: linear-gradient(135deg, #071329, #0a1c36);
+  border-color: rgba(77, 163, 255, .18);
+}
+.quote {
+  background: linear-gradient(135deg, #061126, #0b1e3a);
+}
+.why, .road .card, .involve .card { border-color: #3b82f6; }
+a:hover, .links a:hover { color: #8bc5ff; }
+::selection { background: rgba(59, 130, 246, .35); color: #fff; }
+.chip.c3 { display: none; }
