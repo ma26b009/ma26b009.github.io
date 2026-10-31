@@ -1,4 +1,6 @@
-    (function () {
+document.documentElement.classList.add("js");
+
+(function () {
       var root = document.documentElement;
       var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -51,11 +53,8 @@
       }
 
     })();
-  
 
-/* Original script block separator */
-
-    (function () {
+(function () {
       var cv = document.getElementById('calc');
       if (!cv || !cv.getContext) return;
       var ctx = cv.getContext('2d');
@@ -128,11 +127,8 @@
       }
       setup(); draw();
     })();
-  
 
-/* Original script block separator */
-
-    (function () {
+(function () {
       var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       function css(n) { return getComputedStyle(document.documentElement).getPropertyValue(n).trim(); }
       function whenVisible(el, on, off) {
@@ -275,11 +271,8 @@
         });
       }
     })();
-  
 
-/* Original script block separator */
-
-    (function () {
+(function () {
       var rest = document.getElementById('rest'), root = document.documentElement;
       var btn = document.getElementById('openProfile');
       if (!rest) return;
@@ -307,4 +300,3 @@
         if (tgt && rest.contains(tgt)) openRest(function () { go(location.hash); });
       }
     })();
-  
