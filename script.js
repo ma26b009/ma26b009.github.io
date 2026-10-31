@@ -76,7 +76,7 @@ document.documentElement.classList.add("js");
       }
       function draw() {
         var c = F[sel.value], a = parseFloat(rng.value);
-        var W = cv.clientWidth, H = Math.max(240, Math.round(W * 0.5)), dpr = window.devicePixelRatio || 1;
+        var W = cv.clientWidth, H = Math.max(220, Math.round(W * 0.34)), dpr = window.devicePixelRatio || 1;
         cv.style.height = H + 'px';
         cv.width = W * dpr; cv.height = H * dpr;
         ctx.setTransform(dpr, 0, 0, dpr, 0, 0);

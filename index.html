@@ -21,9 +21,7 @@
         <a href="#about">About</a>
         <a href="#maths">Maths</a>
         <a href="#tech">Coding</a>
-        <a href="#mathcode">Maths+Code</a>
         <a href="#robotics">Robotics</a>
-        <a href="#beyond">Beyond academics</a>
         <a href="#languages">Languages</a>
         <a href="#roadmap">Roadmap</a>
         <a href="#contact">Contact</a>
@@ -75,7 +73,7 @@
       <a class="tile reveal" href="#tech"><span class="ic">{ }</span><b>Coding</b><small>Python, R, MATLAB, Mathematica</small></a>
       <a class="tile reveal" href="#robotics"><span class="ic">🤖</span><b>Robotics &amp; electronics</b><small>Sensors, motors, circuits</small></a>
       <a class="tile reveal" href="#maths"><span class="ic">🧠</span><b>AI</b><small>The maths behind it</small></a>
-      <a class="tile reveal" href="#beyond"><span class="ic">⚽</span><b>Sports &amp; games</b><small>Football, kho kho, chess</small></a>
+      <a class="tile reveal" href="#about"><span class="ic">⚽</span><b>Sports &amp; games</b><small>Football, kho kho, chess</small></a>
     </div>
   </div>
 
@@ -132,7 +130,6 @@
     <div class="wrap reveal">
       <div class="kicker">What I believe</div>
       <p class="big">&ldquo;Once I decide to do something, I see it through to the end.&rdquo;</p>
-      </p>
     </div>
   </div>
 
@@ -253,27 +250,10 @@
         <span class="tag learning">R<small>Learning right now</small></span>
         <span class="tag learning">Other languages<small>Want to learn</small></span>
       </div>
-      <div class="panel reveal">
-        <div class="pill">Right now</div>
-        <ul>
-          <li><b>R programming</b> Learning it right now.</li>
-          <li><b>Python</b> Comfortable with the basics, now going deeper.</li>
-          <li><b>MATLAB &amp; Mathematica</b> Already learned both.</li>
-          <li><b>Next few months</b> Much more programming and robotics.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- 04 MATHS + CODE -->
-  <section id="mathcode" class="alt">
-    <div class="wrap">
-      <div class="sh reveal"><span class="num">04</span><div><div class="kicker">Maths meets code</div><h2>Calculus, drawn</h2></div></div>
-      <p class="sub reveal">
-        The derivative is the slope of a curve at one point. Choose a function
-        and move the slider to see the tangent line change.
-      </p>
-      <div class="demo card reveal">
+      <div class="demo card reveal" id="mathcode">
+        <div class="pill">Maths meets code</div>
+        <h3>Calculus, drawn</h3>
+        <p class="demo-intro">The derivative is the slope of a curve at one point. Choose a function and move the slider to see the tangent line change.</p>
         <div class="controls">
           <label>Function
             <select id="calcFn">
@@ -293,10 +273,10 @@
     </div>
   </section>
 
-  <!-- 05 ROBOTICS -->
-  <section id="robotics">
+  <!-- 04 ROBOTICS -->
+  <section id="robotics" class="alt">
     <div class="wrap">
-      <div class="sh reveal"><span class="num">05</span><div><div class="kicker">Robotics &amp; electronics</div><h2>What's inside things</h2></div></div>
+      <div class="sh reveal"><span class="num">04</span><div><div class="kicker">Robotics &amp; electronics</div><h2>What's inside things</h2></div></div>
       <div class="robo reveal">
         <div>
           <blockquote>&ldquo;It's the little building blocks of everyday stuff that fascinate me.&rdquo;</blockquote>
@@ -360,30 +340,10 @@
     </div>
   </section>
 
-  <!-- 06 BEYOND ACADEMICS -->
-  <section id="beyond" class="alt">
-    <div class="wrap">
-      <div class="sh reveal"><span class="num">06</span><div><div class="kicker">Beyond academics</div><h2>What I do when I'm not studying</h2></div></div>
-      <div class="bento">
-        <div class="card reveal"><span class="icon">⚽</span><h3>Football</h3><p>Love the game, and playing as part of a team is the best part.</p></div>
-        <div class="card reveal"><span class="icon">🏃‍♀️</span><h3>Kho kho</h3><p>Another favourite, on the field whenever possible.</p></div>
-        <div class="card big reveal">
-          <span class="icon">📚</span>
-          <h3>Novels &amp; Urdu literature</h3>
-          <p>Novels and Urdu literature, especially Allama Iqbal's poetry, fill most of my free time and keep me motivated.</p>
-          <p>Writing Urdu poems of my own is part of it too.</p>
-        </div>
-        <div class="card reveal"><span class="icon">♟️</span><h3>Chess</h3><p>Just started. Still learning.</p></div>
-        <div class="card reveal"><span class="icon">🚲</span><h3>Cycling</h3><p>Songs on, no place to go, just riding around campus. Love it.</p></div>
-        <div class="card wide reveal"><span class="icon">🔧</span><h3>Taking things apart</h3><p>Opening things up to see the components inside. A computer keyboard has already been through it.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 07 LANGUAGES -->
+  <!-- 05 LANGUAGES -->
   <section id="languages">
     <div class="wrap">
-      <div class="sh reveal"><span class="num">07</span><div><div class="kicker">Languages</div><h2>Languages I know</h2></div></div>
+      <div class="sh reveal"><span class="num">05</span><div><div class="kicker">Languages</div><h2>Languages I know</h2></div></div>
       <div class="grid">
         <div class="card lang reveal">
           <div class="script">Aa</div>
@@ -407,10 +367,6 @@
   <!-- QUOTE -->
   <div class="quote">
     <div class="wrap reveal">
-      <blockquote>
-        &ldquo;Raise your selfhood so high that before every decree of destiny,
-        God Himself asks you: <em>tell me, what is it that you wish?</em>&rdquo;
-      </blockquote>
       <p class="roman" lang="ur" dir="rtl">
         خودی کو کر بلند اتنا کہ ہر تقدیر سے پہلے،<br>
         خدا بندے سے خود پوچھے، بتا تیری رضا کیا ہے۔
@@ -420,10 +376,10 @@
     </div>
   </div>
 
-  <!-- 08 ROADMAP -->
+  <!-- 06 ROADMAP -->
   <section id="roadmap">
     <div class="wrap">
-      <div class="sh reveal"><span class="num">08</span><div><div class="kicker">Roadmap</div><h2>Where I want to go</h2></div></div>
+      <div class="sh reveal"><span class="num">06</span><div><div class="kicker">Roadmap</div><h2>Where I want to go</h2></div></div>
       <div class="road">
         <div class="card reveal">
           <div class="pill">Now</div>
@@ -453,30 +409,16 @@
           </ul>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- 09 PROJECTS -->
-  <section id="projects" class="alt">
-    <div class="wrap">
-      <div class="sh reveal"><span class="num">09</span><div><div class="kicker">Projects</div><h2>Coming soon</h2></div></div>
-      <p class="sub reveal">No projects yet. The first one is coming soon, and it will show up here.</p>
-      <div class="grid">
-        <div class="card proj reveal"><div class="pill">Coming soon</div><h3>Project 1</h3><p>Something with calculus and code.</p></div>
-        <div class="card proj reveal"><div class="pill">Coming soon</div><h3>Project 2</h3><p>Something with electronics or robotics.</p></div>
-        <div class="card proj reveal"><div class="pill">Coming soon</div><h3>Project 3</h3><p>Another idea.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FRIENDS -->
-  <section>
-    <div class="wrap">
-      <div class="sh reveal"><span class="num">✦</span><div><div class="kicker">My friends say</div><h2>How they describe me</h2></div></div>
-      <div class="words reveal">
-        <span class="word">Headstrong</span>
-        <span class="word">Hardworking</span>
-        <span class="word">Straightforward</span>
+      <div class="projects reveal" id="projects">
+        <div>
+          <h3>Projects: coming soon</h3>
+          <p>No projects yet. The first one is coming soon, and it will show up here.</p>
+        </div>
+        <ul>
+          <li><b>Project 1</b> Something with calculus and code.</li>
+          <li><b>Project 2</b> Something with electronics or robotics.</li>
+          <li><b>Project 3</b> Another idea.</li>
+        </ul>
       </div>
     </div>
   </section>
