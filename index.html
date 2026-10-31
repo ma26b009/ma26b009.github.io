@@ -8,14 +8,39 @@
 </head>
 <body>
   <header>
-    <h1>Hi, I'm <span id="typed"></span></h1>
+    <h1>Hi, I'm <span id="typed"></span><span class="cursor">|</span></h1>
     <button id="theme-btn">Toggle theme</button>
   </header>
 
-  <section>
+  <section id="about">
+    <h2>About me</h2>
+    <p>
+      I'm a first-year BS Mathematics student at IIT Madras, and I'm
+      quite interested in mathematics.
+    </p>
+    <p>
+      Lately, I've been learning programming and getting curious
+      about robotics and electronics.
+    </p>
+  </section>
+
+  <section id="projects">
     <h2>My GitHub Projects</h2>
     <ul id="repo-list">Loading...</ul>
   </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <ul class="links">
+      <li><a href="https://github.com/ma26b009" target="_blank" rel="noopener">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/your-linkedin-id" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="mailto:your-email@example.com">Email me</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>© <span id="year"></span> Irtiqa Altaf</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
