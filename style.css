@@ -92,6 +92,20 @@ button:hover {
   text-decoration: none;
 }
 
+.theorem-name {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.theorem {
+  background: var(--card);
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0;
+  overflow-x: auto;
+}
+
 footer {
   margin-top: 3rem;
   color: var(--muted);
