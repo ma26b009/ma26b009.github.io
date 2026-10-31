@@ -1,2 +1,99 @@
-body { font-family: sans-serif; max-width: 700px; margin: 2rem auto; padding: 0 1rem; }
-body.dark { background: #111; color: #eee; }
+:root {
+  --bg: #ffffff;
+  --text: #1f2430;
+  --muted: #5b6475;
+  --accent: #4f46e5;
+  --card: #f5f6fa;
+}
+
+body.dark {
+  --bg: #111318;
+  --text: #eceef4;
+  --muted: #a3aabb;
+  --accent: #8b87ff;
+  --card: #1b1e26;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 0 1.2rem;
+  line-height: 1.6;
+  transition: background 0.3s, color 0.3s;
+}
+
+header {
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 0.3rem;
+  margin-top: 2.2rem;
+}
+
+section p {
+  color: var(--muted);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  padding: 0.4rem 0.9rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+.cursor {
+  animation: blink 1s steps(1) infinite;
+  color: var(--accent);
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.links a {
+  display: inline-block;
+  background: var(--card);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid transparent;
+}
+
+.links a:hover {
+  border-color: var(--accent);
+  text-decoration: none;
+}
+
+footer {
+  margin-top: 3rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
