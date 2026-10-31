@@ -272,6 +272,12 @@ h2 {
 
 .two { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: clamp(32px, 6vw, 72px); align-items: start; }
 .two > div:first-child p { max-width: 36em; }
+.signoff {
+  margin-top: 1.6em !important; padding-top: 1.1em; max-width: 24em;
+  border-top: 1px solid var(--line2);
+  font-family: var(--serif); font-style: italic; font-weight: 400;
+  font-size: 1.4rem; line-height: 1.4; color: var(--accent);
+}
 
 /* cards: quiet sheets, no lift */
 .card {
