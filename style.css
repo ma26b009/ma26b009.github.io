@@ -247,18 +247,15 @@ section { padding: clamp(52px, 6.5vw, 84px) 0; }
 section.alt { background: var(--bg2); border-block: 1px solid var(--line); }
 section + section.alt, section.alt + section { border-top-width: 1px; }
 
-.sh { position: relative; display: block; margin-bottom: 28px; }
-.sh::after { content: ""; display: table; clear: both; }
+.sh { position: relative; display: flex; align-items: baseline; gap: 14px; margin-bottom: 30px; }
 .num {
   font-family: var(--serif); font-style: italic; font-weight: 400;
   font-size: 1.05rem; line-height: 24px; color: var(--accent); white-space: nowrap;
   font-variant-numeric: lining-nums;
-  float: left; margin-right: 12px;
 }
 .num::before { content: "§\00a0"; color: var(--muted); font-style: normal; }
 section:not([id]) .num::before { content: none; }
 .kicker { font-size: 0.9rem; line-height: 24px; font-weight: 500; color: var(--accent); }
-h2 { clear: left; }
 h2 {
   margin-top: 2px;
   font-size: clamp(2rem, 4.2vw, 2.9rem); line-height: 1.1; letter-spacing: -0.015em;
@@ -267,7 +264,7 @@ h2 {
 
 /* section numbers hang in the margin on wide screens, like equation numbers */
 @media (min-width: 1240px) {
-  .num { float: none; margin: 0; position: absolute; right: calc(100% + 28px); top: 30px; text-align: right; }
+  .num { position: absolute; right: calc(100% + 28px); top: 50%; transform: translateY(-50%); text-align: right; }
 }
 
 .two { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: clamp(32px, 6vw, 72px); align-items: start; }
@@ -340,7 +337,15 @@ h2 {
 .q::first-letter { text-transform: none; }
 
 /* why I like mathematics: five small figures */
-.why5 { margin-top: 40px; }
+.why5 { margin-top: 44px; }
+#tech .card h3 { margin-bottom: 14px; }
+@media (min-width: 861px) { #tech.math-grid { grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr); } }
+#tech .tag { flex: 1 1 120px; }
+#tech .tags { margin-bottom: 0; gap: 8px; }
+#tech .tag { min-width: 0; flex: 1 1 130px; }
+.demo.card { margin-top: 22px; }
+.open-q { margin-top: 18px; }
+.open-q > p { max-width: 46em; }
 .why5 h3.big { font-size: 1.6rem; margin-bottom: 18px; }
 .wgrid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 18px; }
 .wcard { grid-column: span 2; padding: 0; overflow: hidden; display: flex; flex-direction: column; }
